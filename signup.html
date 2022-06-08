@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="signup.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="signup-box">
+      <h1>Sign Up</h1>
+      <h4>It's free and only takes a minute</h4>
+      <form action="https://sheetdb.io/api/v1/3gte7963u237a" method="post" id="sheetdb-form">
+
+
+
+
+
+
+
+        <label>First Name</label>
+        <input type="text" placeholder="" name="data[Fname]" required />
+        <label>Last Name</label>
+        <input type="text" placeholder="" name="data[Lname]" required />
+        <label>Email</label>
+        <input type="email" placeholder=""  name="data[email]" />
+        <label>Phone.No</label>
+        <input type="number" name="data[phone number] " required />        
+        <label>Password</label>
+        <input type="password" placeholder="" name="data[Password]" />
+        <label>Confirm Password</label>
+        <input type="password" placeholder="" name="data[Confirm Password]" />
+        <input type="submit" value="signup" />
+      </form>
+      <p>
+        By clicking the Sign Up button,you agree to our <br />
+        <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+      </p>
+    </div>
+    <p class="para-2">
+      Already have an account? <a href="login.html">Login here</a>
+    </p>
+
+
+
+    <script>
+            var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.open('thanklog.html', '_blank');
+
+          });
+        });
+        </script>
+        
+  </body>
+</html>
+
+Login HTML
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login | By Code Info</title>
+    <link rel="stylesheet" href="Css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
