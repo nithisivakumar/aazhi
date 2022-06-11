@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="chooseshan.css">
+	<link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+	<title>Shanthi</title>
+</head>
+<body>
+	<div class="container">
+		<h2>
+			Join Your Child
+		</h2>
+		<form action="https://sheetdb.io/api/v1/ne9ibc3sr57v1" method="post" id="sheetdb-form">
+
+			<label>Child Name</label>
+			<input type="text" placeholder="" name="data[Childname]" required />
+            <label>Parent Name</label>
+			<input type="text" placeholder="" name="data[Parentname]" required />
+            <label>Phone Number</label>
+			<input type="Number" name="data[Number]" placeholder="" required />
+			<label>Choose Place</label>
+			<select name="data[Place]" required/>Place
+			<option>Puducherry</option>
+			</select>
+			
+			<label>Subjects</label>
+			<select name="data[Subjects]" required/>
+				<option>None</option>
+				<option>English</option>
+				<option>Maths</option>
+			<option>Tamil</option>
+		<option>Social</option>
+	<option>Science</option>
+<option>All The Above</option>
+</select>
+
+<label>Extra Subjects</label>
+<select name="data[extrasub]">
+
+				<option>None</option >
+				<option>Hindi</option>
+				<option>Sanskrit</option>
+				</select>
+
+				<label>Your Child Class</label>
+				<select name="data[Class]">
+					
+					<option>LKG</option>
+					<option>UKG</option>
+					<option>1st Std</option>
+					<option>2nd Std</option>
+					<option>3rd Std</option>
+					<option>4th Std</option>
+					<option>5th Std</option>
+				</select>
+<input type="submit" value="signup" />
+<br>
+<a href="choose.html"><h4>🡸 Back</h4></a>
+			</form>
+	</div>
+
+
+
+
+	<script>
+            var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.open('index.html', '_blank');
+
+          });
+        });
+        </script>
+        
+
+</body>
+</html>
