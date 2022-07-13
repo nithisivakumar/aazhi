@@ -1,0 +1,10 @@
+body {
+	background: #f1f1f1;
+	font-family: "Raleway";
+}
+
+.center {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
